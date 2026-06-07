@@ -1,3 +1,86 @@
+# Fashion Instance Segmentation with Mask R-CNN
+
+## Project Overview
+This project implements an end-to-end instance segmentation pipeline using Mask R-CNN (Matterport implementation) trained on a custom clothing dataset.
+
+The system covers the full machine learning lifecycle, including **data collection, annotation, preprocessing, model training, and inference visualization**.
+
+The focus is on building a production-style computer vision pipeline for object segmentation tasks.
+
+
+## Objective
+- Build an instance segmentation model for clothing detection  
+- Train Mask R-CNN on a custom annotated dataset  
+- Adapt a pre-trained COCO model to a domain-specific task  
+- Implement full ML pipeline from raw images to inference  
+
+
+## Pipeline Overview
+The project follows a complete CV workflow:
+
+1. Image data collection (web scraping)  
+2. Manual annotation using VIA (VGG Image Annotator)  
+3. Mask encoding (RLE format)  
+4. Dataset preprocessing and structuring  
+5. Model configuration and adaptation  
+6. Transfer learning from COCO pretrained weights  
+7. Training (head + full network fine-tuning)  
+8. Inference and visualization  
+
+
+## Model Architecture
+- Mask R-CNN (Matterport implementation)  
+- TensorFlow 2.14 + Keras  
+- Pretrained COCO weights for transfer learning  
+- Custom dataset-specific classification and mask heads  
+
+
+## Training Strategy
+- Stage 1: Train classification and mask heads only  
+- Stage 2: Fine-tune all layers with data augmentation  
+- Optimized using validation loss monitoring and checkpointing  
+
+
+## Key Components
+- Custom dataset loader (FashionDataset)  
+- Configuration class (hyperparameter tuning)  
+- Data annotation pipeline (VIA + JSON processing)  
+- RLE mask encoding for segmentation targets  
+
+
+## Evaluation Metrics
+- RPN classification loss  
+- Bounding box regression loss  
+- Class prediction loss  
+- Mask segmentation loss  
+- Validation loss monitoring for checkpoint selection  
+
+
+## Inference Output
+Model predictions include:
+- Region proposals (ROIs)  
+- Segmentation masks  
+- Class labels  
+- Confidence scores  
+
+
+## Key Learnings
+- End-to-end computer vision pipeline design  
+- Dataset creation and annotation workflows  
+- Transfer learning from large-scale datasets (COCO)  
+- Training stability in instance segmentation models  
+- Practical challenges of real-world segmentation tasks  
+
+
+## Tech Stack
+Python • TensorFlow 2.14 • Keras • Mask R-CNN (Matterport)  
+OpenCV • NumPy • Pandas • VIA Annotation Tool  
+
+
+## Project Type
+Computer Vision • Instance Segmentation • Deep Learning Pipeline
+
+
 **Google Colab image segmentation project with Matterport Mask-RCNN implementation  on Keras and TensorFlow 2.14.0 and Python 3.10.12**
 
 
