@@ -81,7 +81,7 @@ OpenCV • NumPy • Pandas • VIA Annotation Tool
 Computer Vision • Instance Segmentation • Deep Learning Pipeline
 
 
-**Google Colab image segmentation project with Matterport Mask-RCNN implementation  on Keras and TensorFlow 2.14.0 and Python 3.10.12**
+## Google Colab image segmentation project with Matterport Mask-RCNN implementation  on Keras and TensorFlow 2.14.0 and Python 3.10.12**
 
 
 **Step 1: Collect web images from Google Images**
